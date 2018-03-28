@@ -1,3 +1,3 @@
 # circleci-sonar-scanner
 
-sonar-scanner (nothing really special for CircleCI)
+sonar-scanner in Docker!
