@@ -12,7 +12,7 @@ RUN unzip sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux
 RUN ln -s /sonar-scanner-${SONAR_SCANNER_VERSION}-linux/bin/sonar-scanner /usr/bin/sonar-scanner
 RUN chmod +x /usr/bin/sonar-scanner
 
-VOLUME /src
-WORKDIR /src
+VOLUME /project
+WORKDIR /project
 
 CMD sonar-scanner $SONAR_OPTS
