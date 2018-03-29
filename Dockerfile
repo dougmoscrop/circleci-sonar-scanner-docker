@@ -15,4 +15,5 @@ RUN chmod +x /usr/bin/sonar-scanner
 VOLUME /project
 WORKDIR /project
 
-CMD sonar-scanner $SONAR_OPTS
+ADD run-sonar-scanner.sh /usr/bin/run-sonar-scanner
+CMD run-sonar-scanner
