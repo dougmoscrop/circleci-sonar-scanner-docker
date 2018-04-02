@@ -32,7 +32,7 @@ fi
 
 if [ -f 'package.json' ]; then
   NAME=$(cat package.json | grep \"name\": | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')
-  SONAR_OPTS="${SONAR_OPTS} -D sonar.projectKey=${NAME}"
+  SONAR_OPTS="${SONAR_OPTS} -D sonar.projectKey=${NAME/@/}"
 fi
 
 if [ -n "${SONAR_OPTS:-}" ]; then
