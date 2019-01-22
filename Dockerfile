@@ -1,10 +1,10 @@
 FROM openjdk:8-jre-slim
 
-ENV SONAR_SCANNER_VERSION 3.1.0.1141
+ENV SONAR_SCANNER_VERSION 3.3.0.1492
 ENV SONAR_OPTS ''
 
 RUN apt-get update && apt-get install -y wget
-RUN wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip
+RUN wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux.zip
 RUN apt-get remove -y wget && apt-get purge
 
 RUN unzip sonar-scanner-cli-${SONAR_SCANNER_VERSION}-linux
